@@ -111,45 +111,36 @@ function Navbar() {
             <h2 className="text-[25px] font-[500]">GipsLepka</h2>
           </div>
 
-          <ul className="flex flex-col justify-start items-start pl-[20px] pt-[50px] h-full gap-[20px]">
-            <li>
-              <Link
-                to={"/"}
-                className={`${
-                  location.pathname === "/"
-                    ? "bg-[#8080803f] px-[6px] py-[3px] rounded-[5px]"
-                    : "px-[6px] py-[3px]"
-                } `}
-                style={{ backdropFilter: "blur(10px)" }}
-              >
-                Asosiy
-              </Link>
+          <ul className="flex flex-col justify-start items-start px-[20px] pt-[50px] h-full gap-[20px] w-full">
+            <li
+              className={`${
+                location.pathname === "/"
+                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
+                  : "px-[6px] py-[3px]"
+              } `}
+              style={{ backdropFilter: "blur(10px)" }}
+            >
+              <Link to={"/"}>Asosiy</Link>
             </li>
-            <li>
-              <Link
-                to={"/lepka"}
-                className={`${
-                  location.pathname === "/lepka"
-                    ? "bg-[#8080803f] px-[6px] py-[3px] rounded-[5px]"
-                    : "px-[6px] py-[3px]"
-                } `}
-                style={{ backdropFilter: "blur(10px)" }}
-              >
-                Karnizlar
-              </Link>
+            <li
+              className={`${
+                location.pathname === "/lepka"
+                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
+                  : "px-[6px] py-[3px]"
+              } `}
+              style={{ backdropFilter: "blur(10px)" }}
+            >
+              <Link to={"/lepka"}>Karnizlar</Link>
             </li>
-            <li>
-              <Link
-                to={"/about"}
-                className={`${
-                  location.pathname === "/about"
-                    ? "bg-[#8080803f] px-[6px] py-[3px] rounded-[5px]"
-                    : "px-[6px] py-[3px]"
-                } `}
-                style={{ backdropFilter: "blur(10px)" }}
-              >
-                Biz haqimizda
-              </Link>
+            <li
+              className={`${
+                location.pathname === "/about"
+                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
+                  : "px-[6px] py-[3px]"
+              } `}
+              style={{ backdropFilter: "blur(10px)" }}
+            >
+              <Link to={"/about"}>Biz haqimizda</Link>
             </li>
           </ul>
 
