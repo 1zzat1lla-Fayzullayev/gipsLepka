@@ -17,7 +17,7 @@ function Navbar() {
     <>
       {/* for desktop */}
       <div
-        className="bg-[#ffffff34] fixed top-0 right-0 w-full z-[99]"
+        className="bg-[#ffffff34] fixed top-0 right-0 w-full z-[999]"
         style={{ backdropFilter: "blur(7px)" }}
       >
         <Wrapper>
@@ -101,22 +101,17 @@ function Navbar() {
       ></div>
 
       <div
-        className={`fixed top-0 left-0 w-[300px] z-[100] h-screen bg-[#ffffff] shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-full z-[100] h-screen bg-[#ffffff] shadow-lg transform transition-transform duration-300 ${
           menu ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col justify-between h-full">
-          <div className="flex items-center gap-2 cursor-pointer pl-[20px] pt-[10px]">
-            <img src="/logo.png" alt="" className="w-[50px]" />
-            <h2 className="text-[25px] font-[500]">GipsLepka</h2>
-          </div>
-
-          <ul className="flex flex-col justify-start items-start px-[20px] pt-[50px] h-full gap-[20px] w-full">
+        <div className="flex flex-col justify-between ">
+          <ul className="flex flex-col justify-start items-start px-[20px] pt-[120px] h-full gap-[20px] w-full">
             <li
               className={`${
                 location.pathname === "/"
-                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
-                  : "px-[6px] py-[3px]"
+                  ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"
+                  : "px-[6px] py-[6px]"
               } `}
               style={{ backdropFilter: "blur(10px)" }}
             >
@@ -125,8 +120,8 @@ function Navbar() {
             <li
               className={`${
                 location.pathname === "/lepka"
-                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
-                  : "px-[6px] py-[3px]"
+                  ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"
+                  : "px-[6px] py-[6px]"
               } `}
               style={{ backdropFilter: "blur(10px)" }}
             >
@@ -135,8 +130,8 @@ function Navbar() {
             <li
               className={`${
                 location.pathname === "/about"
-                  ? "bg-[#8080803f] px-[6px] py-[3px] w-full rounded-[5px]"
-                  : "px-[6px] py-[3px]"
+                  ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"
+                  : "px-[6px] py-[6px]"
               } `}
               style={{ backdropFilter: "blur(10px)" }}
             >
@@ -145,7 +140,7 @@ function Navbar() {
           </ul>
 
           <Button
-            className="cursor-pointer m-[20px]"
+            className="cursor-pointer m-[20px] py-[6px]"
             onClick={() => {
               setModal(true);
               setMenu(false);
