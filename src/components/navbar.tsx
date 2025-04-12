@@ -3,11 +3,12 @@ import Wrapper from "../layout/wrapper";
 import { Button } from "./ui/button";
 import { Link, useLocation } from "react-router-dom";
 import DialogDemo from "@/shared/modal";
+import useModal from "@/hooks/use-modal";
 
 function Navbar() {
   const location = useLocation();
+  const { openModal, closeModal, isOpen } = useModal();
   const [menu, setMenu] = useState<boolean>(false);
-  const [modal, setModal] = useState<boolean>(false);
 
   const openMenu = () => {
     setMenu(!menu);
@@ -82,12 +83,12 @@ function Navbar() {
 
             <Button
               className="hidden md:block cursor-pointer"
-              onClick={() => setModal(true)}
+              onClick={openModal}
             >
               Murojaat uchun
             </Button>
 
-            <DialogDemo open={modal} onClose={() => setModal(false)} />
+            <DialogDemo open={isOpen} onClose={closeModal} />
           </div>
         </Wrapper>
       </div>
@@ -142,7 +143,7 @@ function Navbar() {
           <Button
             className="cursor-pointer m-[20px] py-[6px]"
             onClick={() => {
-              setModal(true);
+              openModal();
               setMenu(false);
             }}
           >
