@@ -73,7 +73,7 @@ function DialogDemo({ open, onClose }: { open: boolean; onClose: () => void }) {
 
       const data = await res.json();
       if (data.ok) {
-        toast.success("Muvaffaqiyatli yuborildi!");
+        toast.success("So'rovingiz uchun rahmat. Tez orada siz bilan bog'lanamiz!");
 
         setForm({ name: "", phone: "+998 ", loading: false });
         onClose();
