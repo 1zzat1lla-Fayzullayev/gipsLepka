@@ -1,18 +1,18 @@
-import { useState } from "react";
+// import { useState } from "react";
 import Wrapper from "../layout/wrapper";
 import { Button } from "./ui/button";
-import { Link, useLocation } from "react-router-dom";
+// import { Link, useLocation } from "react-router-dom";
 import DialogDemo from "@/shared/modal";
 import useModal from "@/hooks/use-modal";
 
 function Navbar() {
-  const location = useLocation();
+  // const location = useLocation();
   const { openModal, closeModal, isOpen } = useModal();
-  const [menu, setMenu] = useState<boolean>(false);
+  // const [menu, setMenu] = useState<boolean>(false);
 
-  const openMenu = () => {
-    setMenu(!menu);
-  };
+  // const openMenu = () => {
+  //   setMenu(!menu);
+  // };
 
   return (
     <>
@@ -23,14 +23,12 @@ function Navbar() {
       >
         <Wrapper>
           <div className="py-2 flex items-center justify-between">
-            <Link to={"/"}>
-              <div className="flex items-center gap-2 cursor-pointer">
-                <img src="/logo.png" alt="" className="w-[50px]" />
-                <h2 className="text-[25px] font-[500]">GipsLepka</h2>
-              </div>
-            </Link>
+            <div className="flex items-center gap-2 cursor-pointer">
+              <img src="/logo.png" alt="" className="w-[50px]" />
+              <h2 className="text-[25px] font-[500]">GipsLepka</h2>
+            </div>
             <div>
-              <ul className="hidden md:flex gap-[20px]">
+              {/* <ul className="hidden md:flex gap-[20px]">
                 <li>
                   <Link
                     to={"/"}
@@ -70,9 +68,9 @@ function Navbar() {
                     Biz haqimizda
                   </Link>
                 </li>
-              </ul>
+              </ul> */}
             </div>
-            <div className="block md:hidden z-[99]">
+            {/* <div className="block md:hidden z-[99]">
               <div
                 className={`burger ${menu ? "open" : ""}`}
                 onClick={openMenu}
@@ -81,14 +79,16 @@ function Navbar() {
                 <div className="w-[25px] h-[2px] rounded-full block duration-300 bg-black"></div>
                 <div className="w-[25px] h-[2px] rounded-full block duration-300 bg-black"></div>
               </div>
-            </div>
+            </div> */}
 
             <Button
-              className="hidden md:block cursor-pointer"
+              className="cursor-pointer hidden md:block"
               onClick={openModal}
             >
               Murojaat uchun
             </Button>
+
+            <img src="/phone.svg" className="w-[50px] md:hidden" onClick={openModal} />
 
             <DialogDemo open={isOpen} onClose={closeModal} />
           </div>
@@ -96,14 +96,14 @@ function Navbar() {
       </div>
 
       {/* for mobile */}
-      <div
+      {/* <div
         className={`fixed inset-0 bg-black/60 transition-opacity ${
           menu ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={openMenu}
-      ></div>
+      ></div> */}
 
-      <div
+      {/* <div
         className={`fixed top-0 left-0 w-full z-[100] h-screen bg-[#ffffff] shadow-lg transform transition-transform duration-300 ${
           menu ? "translate-x-0" : "-translate-x-full"
         }`}
@@ -155,7 +155,7 @@ function Navbar() {
             Murojaat uchun
           </Button>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

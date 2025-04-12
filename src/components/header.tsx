@@ -18,8 +18,13 @@ function Header() {
             Gips va Lepkada Tajribali Yondashuv
           </h2>
           <p className="text-gray-600 text-[15px] md:text-lg mb-6">
-            Har qanday dizayn uchun sifatli va aniq ishlangan lepka bezaklari.
-            Tajriba va natijaga e’tibor beramiz.
+            <strong>📈Since 1998</strong> <br />
+            Uzoq yillar sinalgan tajribaga ega ishonchIi ishlab chiqaruvchidan
+            Lepka mahsulotlari⚜️ <br /> <br />
+            Tanlovda adashmang✅ <br /> <br />
+            <a href="tel:+998977718061"> +998977718061</a> <br />
+            <a href="tel:+998903498289">+998903498289</a> <br />
+            <a href="tel:+998938880838">+998938880838</a> <br />
           </p>
 
           <div className="flex items-center gap-3">
@@ -35,7 +40,7 @@ function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Ishlarimizni Ko‘rish
+                Instagram
               </a>
             </Button>
           </div>
