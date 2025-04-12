@@ -6,7 +6,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import useImageLoader from "@/hooks/use-imageLoader";
 
 function Header() {
-  const { isOpen, closeModal, openModal } = useModal();
+  const { isOpen, closeModal } = useModal();
   const { allImagesLoaded, markAsLoaded } = useImageLoader(2);
 
   return (
@@ -28,9 +28,9 @@ function Header() {
           </p>
 
           <div className="flex items-center gap-3">
-            <Button className="cursor-pointer" onClick={openModal}>
+            {/* <Button className="cursor-pointer" onClick={openModal}>
               Buyurtma uchun
-            </Button>
+            </Button> */}
 
             <DialogDemo open={isOpen} onClose={closeModal} />
 
@@ -40,7 +40,7 @@ function Header() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Instagram
+                Instagram sahifamiz
               </a>
             </Button>
           </div>
