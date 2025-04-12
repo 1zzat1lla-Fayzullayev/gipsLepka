@@ -1,5 +1,5 @@
 import Header from "@/components/header";
-import Wrapper from "@/layout/wrapper";
+// import Wrapper from "@/layout/wrapper";
 
 function Home() {
   return (

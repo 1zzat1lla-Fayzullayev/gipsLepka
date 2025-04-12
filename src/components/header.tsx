@@ -1,5 +1,4 @@
 import Wrapper from "@/layout/wrapper";
-import React from "react";
 import { Button } from "./ui/button";
 import useModal from "@/hooks/use-modal";
 import DialogDemo from "@/shared/modal";
