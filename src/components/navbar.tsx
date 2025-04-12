@@ -23,10 +23,12 @@ function Navbar() {
       >
         <Wrapper>
           <div className="py-2 flex items-center justify-between">
-            <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/logo.png" alt="" className="w-[50px]" />
-              <h2 className="text-[25px] font-[500]">GipsLepka</h2>
-            </div>
+            <Link to={"/"}>
+              <div className="flex items-center gap-2 cursor-pointer">
+                <img src="/logo.png" alt="" className="w-[50px]" />
+                <h2 className="text-[25px] font-[500]">GipsLepka</h2>
+              </div>
+            </Link>
             <div>
               <ul className="hidden md:flex gap-[20px]">
                 <li>
@@ -44,15 +46,15 @@ function Navbar() {
                 </li>
                 <li>
                   <Link
-                    to={"/lepka"}
+                    to={"/pictures"}
                     className={`${
-                      location.pathname === "/lepka"
+                      location.pathname === "/pictures"
                         ? "bg-[#8080803f] px-[6px] py-[3px] rounded-[5px]"
                         : "px-[6px] py-[3px]"
                     } `}
                     style={{ backdropFilter: "blur(10px)" }}
                   >
-                    Karnizlar
+                    Bizning ishlarimiz
                   </Link>
                 </li>
                 <li>
@@ -109,6 +111,7 @@ function Navbar() {
         <div className="flex flex-col justify-between ">
           <ul className="flex flex-col justify-start items-start px-[20px] pt-[120px] h-full gap-[20px] w-full">
             <li
+              onClick={() => setMenu(false)}
               className={`${
                 location.pathname === "/"
                   ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"
@@ -119,16 +122,18 @@ function Navbar() {
               <Link to={"/"}>Asosiy</Link>
             </li>
             <li
+              onClick={() => setMenu(false)}
               className={`${
-                location.pathname === "/lepka"
+                location.pathname === "/pictures"
                   ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"
                   : "px-[6px] py-[6px]"
               } `}
               style={{ backdropFilter: "blur(10px)" }}
             >
-              <Link to={"/lepka"}>Karnizlar</Link>
+              <Link to={"/pictures"}>Bizning ishlarimiz</Link>
             </li>
             <li
+              onClick={() => setMenu(false)}
               className={`${
                 location.pathname === "/about"
                   ? "bg-[#8080803f] px-[6px] py-[6px] w-full rounded-[5px]"

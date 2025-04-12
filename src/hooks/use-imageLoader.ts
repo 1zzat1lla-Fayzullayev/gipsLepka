@@ -1,15 +1,21 @@
 import { useState } from "react";
 
-function useImageLoader(count: number) {
-  const [loadedImages, setLoadedImages] = useState(0);
+function useImageLoader(imageCount: number) {
+  const [loadedImages, setLoadedImages] = useState<boolean[]>(
+    Array(imageCount).fill(false)
+  );
 
-  const markAsLoaded = () => {
-    setLoadedImages((prev) => prev + 1);
+  const markAsLoaded = (index: number) => {
+    setLoadedImages((prev) => {
+      const newArr = [...prev];
+      newArr[index] = true;
+      return newArr;
+    });
   };
 
-  const allImagesLoaded = loadedImages === count;
+  const allImagesLoaded = loadedImages.every((loaded) => loaded);
 
-  return { allImagesLoaded, markAsLoaded };
+  return { loadedImages, allImagesLoaded, markAsLoaded };
 }
 
 export default useImageLoader;

@@ -3,10 +3,9 @@ import { Toaster } from "react-hot-toast";
 import Navbar from "./components/navbar";
 import Home from "./pages/home";
 import About from "./pages/about";
-import Lepka from "./pages/lepka";
+import Pictures from "./pages/pictures";
 
 function App() {
-
   return (
     <>
       <BrowserRouter>
@@ -14,7 +13,7 @@ function App() {
         <Routes>
           <Route index path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/lepka" element={<Lepka />} />
+          <Route path="/pictures" element={<Pictures />} />
         </Routes>
       </BrowserRouter>
       <Toaster position="top-center" reverseOrder={false} />
