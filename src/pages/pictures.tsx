@@ -6,19 +6,11 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 function Pictures() {
-  const images: string[] = [
-    "/galery3.jpg",
-    "/galery4.jpg",
-    "/galery5.jpg",
-    "/galery6.jpg",
-    "/galery7.jpg",
-    "/galery8.jpg",
-    "/galery9.jpg",
-    "/galery10.jpg",
-    "/galery11.jpg",
-    "/galery12.jpg",
-  ];
+  const images: string[] = [];
 
+  for (let i = 3; i <= 83; i++) {
+    images.push(`/galery${i}.jpg`);
+  }
   const { markAsLoaded, loadedImages } = useImageLoader(images.length);
   const imageRefs = useRef<HTMLDivElement[]>([]);
 

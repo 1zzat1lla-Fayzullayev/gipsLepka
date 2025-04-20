@@ -198,3 +198,39 @@ input[type="number"] {
   align-items: center;
   justify-content: center;
 }
+
+/* Masonry layout sozlamalari */
+.my-masonry-grid {
+  display: flex;
+  margin-left: -1rem;
+  width: auto;
+}
+
+.my-masonry-grid_column {
+  padding-left: 1rem;
+  background-clip: padding-box;
+}
+
+/* Lightbox sozlamalari */
+.custom-gallery .image-gallery-image {
+  max-height: 70vh;
+  object-fit: contain;
+}
+
+.custom-gallery .image-gallery-thumbnail.active {
+  border: 3px solid #3b82f6;
+}
+
+.custom-gallery .image-gallery-icon:hover {
+  color: #3b82f6;
+}
+
+/* Yuklanayotgan skeleton animatsiyasi */
+@keyframes pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
