@@ -16,8 +16,8 @@ function Navbar() {
         <Wrapper>
           <div className="py-2 flex items-center justify-between">
             <div className="flex items-center gap-2 cursor-pointer">
-              <img src="/logo.png" alt="" className="w-[50px]" />
-              <h2 className="text-[25px] font-[500]">GipsLepka</h2>
+              <img src="/logo.png" alt="" className="w-[40px] md:w-[50px]" />
+              <h2 className="text-[20px] md:text-[25px] font-[500]">GipsLepka</h2>
             </div>
             <div>
              
@@ -31,7 +31,7 @@ function Navbar() {
               Murojaat uchun
             </Button>
 
-            <img src="/phone.svg" className="w-[50px] md:hidden" onClick={openModal} />
+            <img src="/phone.svg" className="w-[40px] md:w-[50px] md:hidden" onClick={openModal} />
 
             <DialogDemo open={isOpen} onClose={closeModal} />
           </div>
