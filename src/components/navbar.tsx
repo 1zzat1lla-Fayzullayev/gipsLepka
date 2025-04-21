@@ -13,7 +13,7 @@ function Navbar() {
         className="bg-[#ffffff34] fixed top-0 right-0 w-full z-[999]"
         style={{ backdropFilter: "blur(7px)" }}
       >
-        <Wrapper>
+        <Wrapper> 
           <div className="py-2 flex items-center justify-between">
             <div className="flex items-center gap-2 cursor-pointer">
               <img src="/logo.png" alt="" className="w-[40px] md:w-[50px]" />

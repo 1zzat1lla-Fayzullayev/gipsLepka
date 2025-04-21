@@ -4,6 +4,9 @@ function useImageLoader(imageCount: number) {
   const [loadedImages, setLoadedImages] = useState<boolean[]>(
     Array(imageCount).fill(false)
   );
+  const [failedImages, setFailedImages] = useState<boolean[]>(
+    Array(imageCount).fill(false)
+  );
 
   const markAsLoaded = (index: number) => {
     setLoadedImages((prev) => {
@@ -13,9 +16,25 @@ function useImageLoader(imageCount: number) {
     });
   };
 
-  const allImagesLoaded = loadedImages.every((loaded) => loaded);
+  const markAsError = (index: number) => {
+    setFailedImages((prev) => {
+      const newArr = [...prev];
+      newArr[index] = true;
+      return newArr;
+    });
+  };
 
-  return { loadedImages, allImagesLoaded, markAsLoaded };
+  const allImagesLoaded = loadedImages.every(
+    (loaded, i) => loaded || failedImages[i]
+  );
+
+  return {
+    loadedImages,
+    failedImages,
+    markAsLoaded,
+    markAsError,
+    allImagesLoaded,
+  };
 }
 
 export default useImageLoader;
