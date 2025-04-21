@@ -74,7 +74,7 @@ function Header() {
       <div className="flex flex-col md:flex-row justify-between w-full items-center gap-6 py-12">
         <div className="w-full">
           <h2 ref={headingRef} className="text-3xl md:text-5xl font-bold mb-4">
-            Gips va Lepkada Tajribali Yondashuv
+          Uyingizning ichki va tashqi qismi uchun  gips bezaklari
           </h2>
 
           <p
@@ -114,7 +114,7 @@ function Header() {
           )}
 
           <img
-            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+            src="/galery55.jpg"
             alt="bg"
             onLoad={() => markAsLoaded(0)}
             className={`absolute top-3 left-3 md:top-8 md:left-8 h-full w-full object-cover rounded-xl shadow-lg transition-opacity duration-500 ${
@@ -123,7 +123,7 @@ function Header() {
           />
 
           <img
-            src="https://cdn.wallart.com/img/psk/Lyu55asBhgQ8Z/peel-and-stick-wallpaper-white-wavy-structure-80.jpg"
+            src="/galery13.jpg"
             alt="main"
             onLoad={() => markAsLoaded(1)}
             className={`absolute top-0 left-0 h-full w-full object-cover rounded-xl shadow-xl z-10 transition-opacity duration-500 ${
